@@ -1,13 +1,43 @@
+/*NAV*/
+
+#logo {
+    padding-left: 1%;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.form-group {
+    margin-left: 5%;
+}
+
+#myNav input {
+    width: 800px;
+    font-size:20px;
+    height: 45px;
+}
+
+#myNav button {
+    font-size: 20px;
+    width: 150px;
+}
+
+/*BODY*/
+
+.carCard p {
+    font-size: 18px;
+}
+
 .carCard {
     border:1px solid black;
+    padding:2%;
 }
+
 
 #makeAndModel {
     font-size: 25px;
 }
 
-#myNav input {
-    width: 500px;
-    font-size:20px;
-    height: 45px;
+.backgroundChange  {
+    background-color: red;
+    border: 5px solid black;
 }
