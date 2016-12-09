@@ -1,0 +1,13 @@
+.carCard {
+    border:1px solid black;
+}
+
+#makeAndModel {
+    font-size: 25px;
+}
+
+#myNav input {
+    width: 500px;
+    font-size:20px;
+    height: 45px;
+}

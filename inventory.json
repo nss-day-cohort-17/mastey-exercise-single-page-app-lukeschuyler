@@ -1,0 +1,25 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Cadilac",
+      "model": "Escalade",
+      "year": "2014",
+      "price": "40000",
+      "description": "We Roll Tight Whips, every day."
+    },
+    {
+      "make": "Ford",
+      "model": "Focus",
+      "year": "2004",
+      "price": "3999",
+      "description": "87,000 miles on the odometer, still running great!"
+    }
+  ]
+}
