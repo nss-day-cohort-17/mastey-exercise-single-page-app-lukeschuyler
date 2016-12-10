@@ -36,6 +36,7 @@
 
 .carCard {
     border:1px solid black;
+    border-radius: 5%;
     padding:1%;
     height:280px;
     text-align: center;
@@ -54,7 +55,8 @@
 }
 
 .backgroundChange  {
-    background-color: rgba(0,0,0, .2);
+/*    background-color: rgba(0,0,0, .2);*/
+    background-color: tomato;
     border: 5px solid black;
     padding:.3%;
 }
