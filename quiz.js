@@ -17,11 +17,9 @@ function loadInventory(e) {
     function changeStyles(e) {
 
         if (e.path[1].className === "row") {
-           //  styleChangeBoolian = true;
-           // console.log(e)
+
             e.path[0].classList.add('backgroundChange');
             
-
         } else if (e.path[2].className === 'row') {
 
             e.path[1].classList.add('backgroundChange');
@@ -37,8 +35,6 @@ function loadInventory(e) {
             document.querySelector('#edit-input').value = e.path[0].children[3].innerText;
 
         } else if (e.path[2].className === 'row') {
-
-            console.log(e)
 
             document.querySelector('#edit-input').focus();
 
