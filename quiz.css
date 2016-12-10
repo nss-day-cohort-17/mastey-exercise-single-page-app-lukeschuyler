@@ -23,13 +23,14 @@
 
 /*BODY*/
 
-.carCard p {
+.carPrice, .carYear {
     font-size: 18px;
 }
 
 .carCard {
     border:1px solid black;
-    padding:2%;
+    padding:1%;
+    height:280px;
 }
 
 
@@ -38,6 +39,10 @@
 }
 
 .backgroundChange  {
-    background-color: red;
+    background-color: rgba(0,0,0, .2);
     border: 5px solid black;
+}
+
+.carDescriptions {
+    font-size: 16px;
 }
