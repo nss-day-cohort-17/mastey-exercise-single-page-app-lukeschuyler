@@ -42,7 +42,7 @@ function loadInventory(e) {
 
             document.querySelector('#edit-input').focus();
 
-            // document.querySelector('#edit-input').value = e.path[0].children[3].innerText;            
+            document.querySelector('#edit-input').value = e.path[1].children[3].innerText;            
         }
     }
 

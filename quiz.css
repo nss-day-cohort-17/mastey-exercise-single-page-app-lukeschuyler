@@ -3,11 +3,12 @@
 #logo {
     padding-left: 1%;
     font-size: 30px;
-    margin-top: 5px;
+    margin-top: 8px;
+    color: tomato;
 }
 
 .form-group {
-    margin-left: 5%;
+    margin-left: 2%;
 }
 
 #myNav input {
@@ -21,6 +22,12 @@
     width: 150px;
 }
 
+#myNav {
+    margin-top: 0;
+    background: rgba(23,45,20,.1);
+    height: 60px;
+}
+
 /*BODY*/
 
 .carPrice, .carYear {
@@ -31,7 +38,13 @@
     border:1px solid black;
     padding:1%;
     height:280px;
+    text-align: center;
 }
+
+.carDescriptions {
+    font-size: 16px;
+}
+
 
 
 #makeAndModel {
@@ -41,8 +54,5 @@
 .backgroundChange  {
     background-color: rgba(0,0,0, .2);
     border: 5px solid black;
-}
-
-.carDescriptions {
-    font-size: 16px;
+    padding:.3%;
 }
