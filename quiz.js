@@ -32,15 +32,17 @@ function loadInventory(e) {
 
     function changeDescription (e) {
         if (e.path[1].className === "row") {
-           //  styleChangeBoolian = true;
-           // console.log(e)
+
             document.querySelector('#edit-input').focus();
-            
+            document.querySelector('#edit-input').value = e.path[0].children[3].innerText;
 
         } else if (e.path[2].className === 'row') {
 
-             document.querySelector('#edit-input').focus();
-            
+            console.log(e)
+
+            document.querySelector('#edit-input').focus();
+
+            // document.querySelector('#edit-input').value = e.path[0].children[3].innerText;            
         }
     }
 
