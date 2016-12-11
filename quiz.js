@@ -128,7 +128,7 @@ function loadInventory() {
 
     document.querySelector('#edit-input').addEventListener('keypress', newDescription)
 
-    document.querySelector('#edit-input').addEventListener('change', newDescriptionLive)
+    document.querySelector('#edit-input').addEventListener('input', newDescriptionLive)
 
 
 
