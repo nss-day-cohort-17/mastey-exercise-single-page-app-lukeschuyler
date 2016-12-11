@@ -1,8 +1,4 @@
 
-loadInventory();
-
-var styleChangeBoolian = false;
-
 
 function loadInventory() {
     
@@ -37,6 +33,10 @@ function loadInventory() {
 
 }
 
+    // function disableInput() {
+    //     for (var i = 0; i<)
+    // }
+
     
 
     function editDescription (e) {
@@ -62,6 +62,18 @@ function loadInventory() {
 
     }
 
+    function newDescriptionButton(e) {
+        var selectedDiv = document.querySelector('.backgroundChange');
+            
+            selectedDiv.children[3].innerText = document.querySelector('#edit-input').value
+
+            for (var i = 0; i < selectedDiv.length;i++) {
+            selectedDiv[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
+            }
+
+            document.querySelector('#edit-input').value= '';
+    }
+
     function newDescription(evt) {
             var key = evt.which || evt.keyCode;
             if (key === 13) { 
@@ -75,7 +87,6 @@ function loadInventory() {
             }
 
             document.querySelector('#edit-input').value= '';
-            document.querySelector('#edit-input').blur();
         }
     }
 
@@ -121,9 +132,7 @@ function loadInventory() {
 
     document.querySelector('#edit-input').addEventListener('input', newDescriptionLive)
 
-    // document.querySelector('#edit-input').addEventListener('click', function(e) {
-    //     this.select();
-    // })
+    document.querySelector('#submit').addEventListener('click', newDescriptionButton)
 
 
 
@@ -140,8 +149,4 @@ inventoryLoader.open('GET', 'inventory.json')
 inventoryLoader.send();
 
 }
-
-
-function defaultCarStyles(e) {
-
-}
+loadInventory();

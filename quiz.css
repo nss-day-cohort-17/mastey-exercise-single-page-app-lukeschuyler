@@ -7,17 +7,19 @@
     color: black;
     font-family: 'Loved by the King', cursive;
     display: inline;
+    letter-spacing: 12px;
 }
 
 .form-group {
-    margin-left: 2%;
-    margin-top: -3%;
+    margin-left: 13%;
+    margin-top: -2%;
 }
 
 #myNav input {
-    width: 800px;
+    width: 750px;
     font-size:18px;
-    height: 35px;
+    height: 39px;
+
 }
 
 #myNav button {
@@ -46,11 +48,12 @@ body {
     border:1px solid black;
     border-radius: 5%;
     padding:1%;
-    height:280px;
+    height: 40vh;
+    overflow: auto;
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
-/*     background: radial-gradient(rgba(255,255,255,.9), rgba(255,255,255,.7)), url('https://www.enterprise.com/content/dam/ecom/utilitarian/common/homepage-us/us-homepage-2up-business-rental.jpg.wrend.640.360.jpeg');
-*/}
+
+}
 
 .carDescriptions {
     font-size: 20px;
@@ -59,13 +62,15 @@ body {
 
 
 #makeAndModel {
-    font-size: 30px;
-    letter-spacing: 2px;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-weight: 900;
 }
 
 .backgroundChange  {
     background-color: rgba(255,99,71,.8);
     border: 5px solid black;
-    padding:.3%;
+    padding:3%;
     color: white;
+    line-height: 30px;
 }
