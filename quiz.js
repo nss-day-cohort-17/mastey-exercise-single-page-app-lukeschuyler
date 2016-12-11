@@ -9,17 +9,22 @@ function loadInventory() {
     inventoryLoader.addEventListener("load", function(e) {
 
 
+function defaultStyles() {
+        var backgroundCards = document.getElementsByClassName('backgroundChange');
+
+        for (var i = 0; i < backgroundCards.length;i++) {
+            backgroundCards[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
+        }
+}
 
 
 // CHANGE CARD STYLE FUNCTION
 
     function changeStyles(e) {
 
-        var backgroundCards = document.getElementsByClassName('backgroundChange');
+        console.log(e)
 
-        for (var i = 0; i < backgroundCards.length;i++) {
-            backgroundCards[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
-        }
+        defaultStyles();
 
         if (e.path[1].className === "row") {    
 
@@ -30,12 +35,11 @@ function loadInventory() {
             e.path[1].classList.toggle('backgroundChange');
             
         }
+         else if (e.path[0] === body) {
+            defaultStyles()
+         }
 
-}
-
-    // function disableInput() {
-    //     for (var i = 0; i<)
-    // }
+} 
 
     
 
@@ -77,6 +81,10 @@ function loadInventory() {
     function newDescription(evt) {
             var key = evt.which || evt.keyCode;
             if (key === 13) { 
+
+            if (document.querySelector('#edit-input').value === '') {
+                alert('please enter text');
+            }
             
             var selectedDiv = document.querySelector('.backgroundChange');
             
