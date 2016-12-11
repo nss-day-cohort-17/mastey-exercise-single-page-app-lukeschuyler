@@ -14,10 +14,6 @@ function loadInventory() {
 
 
 
-     
-
-
-
 
 // CHANGE CARD STYLE FUNCTION
 
@@ -25,15 +21,11 @@ function loadInventory() {
 
         var backgroundCards = document.getElementsByClassName('backgroundChange');
 
-        // console.log(backgroundCards.length);
-
         for (var i = 0; i < backgroundCards.length;i++) {
             backgroundCards[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
         }
 
-
-        if (e.path[1].className === "row") {
-            // console.log(e);     
+        if (e.path[1].className === "row") {    
 
             e.path[0].classList.toggle('backgroundChange');
             
@@ -56,8 +48,6 @@ function loadInventory() {
 
             e.path[0].children[3].innerText = document.querySelector('#edit-input').value;
 
-            console.log(e)
-
         } else if (e.path[2].className === 'row') {
 
             document.querySelector('#edit-input').focus();
@@ -66,8 +56,9 @@ function loadInventory() {
 
             e.path[1].children[3].innerText = document.querySelector('#edit-input').value;
 
-            
-        }
+        } 
+
+        document.querySelector('#edit-input').select();
 
     }
 
@@ -79,13 +70,12 @@ function loadInventory() {
             
             selectedDiv.children[3].innerText = document.querySelector('#edit-input').value
 
-            console.log(selectedDiv.children[3].innerText)
+            for (var i = 0; i < selectedDiv.length;i++) {
+            selectedDiv[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
+            }
 
-            for (var i = 0; i < backgroundCards.length;i++) {
-            backgroundCards[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
-        }
-
-
+            document.querySelector('#edit-input').value= '';
+            document.querySelector('#edit-input').blur();
         }
     }
 
@@ -94,7 +84,6 @@ function loadInventory() {
             
             selectedDiv.children[3].innerText = document.querySelector('#edit-input').value
 
-            console.log(selectedDiv.children[3].innerText)
     }
 
 
@@ -122,15 +111,19 @@ function loadInventory() {
 
     document.addEventListener('click', changeStyles);
 
-    // document.addEventListener('click', defaultStyles);
+    // document.querySelector('.form-control').addEventListener('click', preventDeleteStyle);
 
     document.addEventListener('click', editDescription);
 
     document.querySelector('#edit-input').addEventListener('keypress', newDescription)
 
+    document.querySelector('#edit-input').addEventListener('click', newDescription)
+
     document.querySelector('#edit-input').addEventListener('input', newDescriptionLive)
 
-
+    // document.querySelector('#edit-input').addEventListener('click', function(e) {
+    //     this.select();
+    // })
 
 
 

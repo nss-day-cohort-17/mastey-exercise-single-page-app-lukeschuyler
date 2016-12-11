@@ -22,46 +22,46 @@
       "description": "87,000 miles on the odometer, still running great!"
     },
     {
-      "make": "Ford",
-      "model": "Focus",
-      "year": "2004",
-      "price": "3999",
-      "description": "87,000 miles on the odometer, still running great!"
+      "make": "Volvo",
+      "model": "740",
+      "year": "1994",
+      "price": "1399",
+      "description": "Barely Used, Safe, Reliable"
     },
     {
-      "make": "Ford",
-      "model": "Focus",
-      "year": "2004",
-      "price": "3999",
-      "description": "87,000 miles on the odometer, still running great!"
+      "make": "BMW",
+      "model": "XRC",
+      "year": "2009",
+      "price": "24000",
+      "description": "Sporty is as sporty does"
     },
     {
-      "make": "Ford",
-      "model": "Focus",
-      "year": "2004",
-      "price": "3999",
-      "description": "87,000 miles on the odometer, still running great!"
+      "make": "Mitsubishi",
+      "model": "",
+      "year": "1990",
+      "price": "2000",
+      "description": "Sitting in the garage for years, only used for as town car."
     },
     {
-      "make": "Ford",
-      "model": "Focus",
-      "year": "2004",
-      "price": "3999",
-      "description": "87,000 miles on the odometer, still running great!"
+      "make": "Mercedes",
+      "model": "Benz",
+      "year": "2008",
+      "price": "35000",
+      "description": "Luxury at its finest. Still runs like a Mercedes should."
     },
     {
-      "make": "Ford",
-      "model": "Focus",
-      "year": "2004",
-      "price": "3999",
-      "description": "87,000 miles on the odometer, still running great!"
+      "make": "Mutt Cuts",
+      "model": "Dog Mobile",
+      "year": "1994",
+      "price": "2000",
+      "description": "I spent my life savings turning my van into a dog"
     },
     {
-      "make": "Ford",
-      "model": "Focus",
-      "year": "2004",
-      "price": "3999",
-      "description": "87,000 miles on the odometer, still running great!"
+      "make": "Volkswagon",
+      "model": "Jetta",
+      "year": "2009",
+      "price": "3000",
+      "description": "Slight problem with the gass sensor but other than that works great!"
     }
   ]
 }
