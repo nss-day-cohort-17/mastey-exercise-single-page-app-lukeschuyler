@@ -1,17 +1,17 @@
 /*NAV*/
 
 #logo {
-    padding-left: 1%;
+    padding-left: 3%;
     font-size: 45px;
     padding-top: 8px;
     color: black;
     font-family: 'Loved by the King', cursive;
     display: inline;
-    letter-spacing: 12px;
+    letter-spacing: 17px;
 }
 
 .form-group {
-    margin-left: 13%;
+    margin-left: 1%;
     margin-top: -2%;
 }
 
@@ -69,7 +69,7 @@ body {
 
 .backgroundChange  {
     background-color: rgba(255,99,71,.8);
-    border: 5px solid black;
+    border: 5px solid rgba(0,0,0,.7);
     padding:3%;
     color: white;
     line-height: 30px;

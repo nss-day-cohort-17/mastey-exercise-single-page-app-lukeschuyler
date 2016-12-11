@@ -15,6 +15,12 @@ function defaultStyles() {
         for (var i = 0; i < backgroundCards.length;i++) {
             backgroundCards[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
         }
+
+        document.querySelector('#edit-input').setAttribute('disabled', 'disabled');
+
+        document.querySelector('#submit').setAttribute('disabled', 'disabled')
+
+        document.querySelector('#edit-input').setAttribute('value', 'Click on a car!');
 }
 
 
@@ -22,22 +28,27 @@ function defaultStyles() {
 
     function changeStyles(e) {
 
-        console.log(e)
-
-        defaultStyles();
+        if (e.path[0].className !== 'form-control') {
+            defaultStyles();
+        }
 
         if (e.path[1].className === "row") {    
+
+            document.querySelector('#edit-input').removeAttribute('disabled', 'disabled');
+
+            document.querySelector('#submit').removeAttribute('disabled', 'disabled')
 
             e.path[0].classList.toggle('backgroundChange');
             
         } else if (e.path[2].className === 'row') {
 
+            document.querySelector('#edit-input').removeAttribute('disabled', 'disabled');
+
+            document.querySelector('#submit').removeAttribute('disabled', 'disabled')
+
             e.path[1].classList.toggle('backgroundChange');
             
-        }
-         else if (e.path[0] === body) {
-            defaultStyles()
-         }
+        } 
 
 } 
 
@@ -95,6 +106,8 @@ function defaultStyles() {
             }
 
             document.querySelector('#edit-input').value= '';
+
+            defaultStyles();
         }
     }
 
@@ -143,15 +156,7 @@ function defaultStyles() {
     document.querySelector('#submit').addEventListener('click', newDescriptionButton)
 
 
-
-
-
-
-
-  
-
-
-    });
+});
 
 inventoryLoader.open('GET', 'inventory.json')
 inventoryLoader.send();

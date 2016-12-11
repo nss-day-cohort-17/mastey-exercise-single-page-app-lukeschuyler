@@ -30,14 +30,14 @@
     },
     {
       "make": "BMW",
-      "model": "XRC",
-      "year": "2009",
+      "model": "X6",
+      "year": "2017",
       "price": "24000",
       "description": "Sporty is as sporty does"
     },
     {
       "make": "Mitsubishi",
-      "model": "",
+      "model": "Diamante",
       "year": "1990",
       "price": "2000",
       "description": "Sitting in the garage for years, only used for as town car."
