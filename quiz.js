@@ -31,6 +31,10 @@ function loadInventory() {
 
 });
 
+inventoryLoader.open('GET', 'inventory.json')
+inventoryLoader.send();
+
+}
     
  function activateEvents(){
 
@@ -164,8 +168,5 @@ function defaultStyles() {
 
     }
 
-inventoryLoader.open('GET', 'inventory.json')
-inventoryLoader.send();
 
-}
 loadInventory();
