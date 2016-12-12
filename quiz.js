@@ -10,21 +10,44 @@ function loadInventory() {
 
     var data = JSON.parse(e.target.responseText);
 
-    var carDivHTML =    `<div class='row'>`
-    window.data = data
+    // var carDivHTML =    `<div class='row'>`
+
+    var carDivHTML = '';
+
     for (var i = 0; i < data.cars.length; i++) {
-                            
-    carDivHTML += `<div id="carCards${[i]}" class= "col-md-4 col-sm-4 col-xs-4 carCard">
-                      <span id="makeAndModel">${data.cars[i].make} ${data.cars[i].model}</span>
-                      <p id="carYear[i]" class="carYear">Year: ${data.cars[i].year}</p>
-                      <p id="carPrice[i]" class="carPrice">Price: $ ${data.cars[i].price}</p>
-                      <p id="carDescription[i]" class="carDescriptions">${data.cars[i].description}</p>
-                  </div>`
-                        
+        if (i % 3 === 0) {
             
+            carDivHTML += `<div id="row${i / 3}" class="row">`                
+            carDivHTML += `<div id="carCards${[i]}" class= "col-md-4 col-sm-4 col-xs-4 carCard">
+                            <span id="makeAndModel">${data.cars[i].make} ${data.cars[i].model}</span>
+                            <p id="carYear[i]" class="carYear">Year: ${data.cars[i].year}</p>
+                            <p id="carPrice[i]" class="carPrice">Price: $ ${data.cars[i].price}</p>
+                            <p id="carDescription[i]" class="carDescriptions">${data.cars[i].description}</p>
+                        </div>`
+
+            } else if (i % 3 === 1) {
+            
+            carDivHTML += `<div id="carCards${[i]}" class= "col-md-4 col-sm-4 col-xs-4 carCard">
+                            <span id="makeAndModel">${data.cars[i].make} ${data.cars[i].model}</span>
+                            <p id="carYear[i]" class="carYear">Year: ${data.cars[i].year}</p>
+                            <p id="carPrice[i]" class="carPrice">Price: $ ${data.cars[i].price}</p>
+                            <p id="carDescription[i]" class="carDescriptions">${data.cars[i].description}</p>
+                            </div>`
+                      
+            } else {
+
+            carDivHTML += `<div id="carCards${[i]}" class= "col-md-4 col-sm-4 col-xs-4 carCard">
+                            <span id="makeAndModel">${data.cars[i].make} ${data.cars[i].model}</span>
+                            <p id="carYear[i]" class="carYear">Year: ${data.cars[i].year}</p>
+                            <p id="carPrice[i]" class="carPrice">Price: $ ${data.cars[i].price}</p>
+                            <p id="carDescription[i]" class="carDescriptions">${data.cars[i].description}</p>
+                        </div>
+                        </div>`
             }
 
-         carDivHTML+= `</div>`
+        }
+
+         // carDivHTML+= `</div>`
 
     document.querySelector('#car-container').innerHTML = carDivHTML;
 
@@ -106,6 +129,8 @@ function defaultStyles() {
 
     function editDescription (e) {
         if (e.path[1].className === "row") {
+
+            console.log(e)
 
             document.querySelector('#edit-input').focus();
             
