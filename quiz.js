@@ -8,7 +8,31 @@ function loadInventory() {
 
     inventoryLoader.addEventListener("load", function(e) {
 
-     function activateEvents(){
+    var data = JSON.parse(e.target.responseText);
+
+    var carDivHTML =    `<div class='row'>`
+    window.data = data
+    for (var i = 0; i < data.cars.length; i++) {
+                            
+    carDivHTML += `<div id="carCards${[i]}" class= "col-md-4 col-sm-4 col-xs-4 carCard">
+                      <span id="makeAndModel">${data.cars[i].make} ${data.cars[i].model}</span>
+                      <p id="carYear[i]" class="carYear">Year: ${data.cars[i].year}</p>
+                      <p id="carPrice[i]" class="carPrice">Price: $ ${data.cars[i].price}</p>
+                      <p id="carDescription[i]" class="carDescriptions">${data.cars[i].description}</p>
+                  </div>`
+                        
+            
+            }
+
+         carDivHTML+= `</div>`
+
+    document.querySelector('#car-container').innerHTML = carDivHTML;
+
+
+});
+
+    
+ function activateEvents(){
 
         document.addEventListener('click', changeStyles);
 
@@ -23,6 +47,8 @@ function loadInventory() {
         document.querySelector('#submit').addEventListener('click', newDescriptionButton)
 
 }
+
+
 
 activateEvents();
 
@@ -137,32 +163,6 @@ function defaultStyles() {
             selectedDiv.children[3].innerText = document.querySelector('#edit-input').value
 
     }
-
-
-
-
-    var data = JSON.parse(e.target.responseText);
-
-    var carDivHTML =    `<div class='row'>`
-    window.data = data
-    for (var i = 0; i < data.cars.length; i++) {
-                            
-    carDivHTML += `<div id="carCards${[i]}" class= "col-md-4 col-sm-4 col-xs-4 carCard">
-                      <span id="makeAndModel">${data.cars[i].make} ${data.cars[i].model}</span>
-                      <p id="carYear[i]" class="carYear">Year: ${data.cars[i].year}</p>
-                      <p id="carPrice[i]" class="carPrice">Price: $ ${data.cars[i].price}</p>
-                      <p id="carDescription[i]" class="carDescriptions">${data.cars[i].description}</p>
-                  </div>`
-                        
-            
-            }
-
-         carDivHTML+= `</div>`
-
-    document.querySelector('#car-container').innerHTML = carDivHTML;
-
-
-});
 
 inventoryLoader.open('GET', 'inventory.json')
 inventoryLoader.send();
