@@ -8,6 +8,24 @@ function loadInventory() {
 
     inventoryLoader.addEventListener("load", function(e) {
 
+     function activateEvents(){
+
+        document.addEventListener('click', changeStyles);
+
+        document.addEventListener('click', editDescription);
+
+        document.querySelector('#edit-input').addEventListener('keypress', newDescription)
+
+        document.querySelector('#edit-input').addEventListener('click', newDescription)
+
+        document.querySelector('#edit-input').addEventListener('input', newDescriptionLive)
+
+        document.querySelector('#submit').addEventListener('click', newDescriptionButton)
+
+}
+
+activateEvents();
+
 
 function defaultStyles() {
         var backgroundCards = document.getElementsByClassName('backgroundChange');
@@ -16,11 +34,13 @@ function defaultStyles() {
             backgroundCards[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
         }
 
+        document.querySelector('#edit-input').value = '';
+
         document.querySelector('#edit-input').setAttribute('disabled', 'disabled');
 
         document.querySelector('#submit').setAttribute('disabled', 'disabled')
 
-        document.querySelector('#edit-input').setAttribute('value', 'Click on a car!');
+        document.querySelector('#edit-input').setAttribute('placeholder', 'Click on a car to edit description');
 }
 
 
@@ -140,20 +160,6 @@ function defaultStyles() {
          carDivHTML+= `</div>`
 
     document.querySelector('#car-container').innerHTML = carDivHTML;
-
-    document.addEventListener('click', changeStyles);
-
-    // document.querySelector('.form-control').addEventListener('click', preventDeleteStyle);
-
-    document.addEventListener('click', editDescription);
-
-    document.querySelector('#edit-input').addEventListener('keypress', newDescription)
-
-    document.querySelector('#edit-input').addEventListener('click', newDescription)
-
-    document.querySelector('#edit-input').addEventListener('input', newDescriptionLive)
-
-    document.querySelector('#submit').addEventListener('click', newDescriptionButton)
 
 
 });
