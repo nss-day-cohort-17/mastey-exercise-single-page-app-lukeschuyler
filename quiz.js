@@ -11,7 +11,7 @@ function loadInventory() {
     var data = JSON.parse(e.target.responseText);
 
     // var carDivHTML =    `<div class='row'>`
-
+function populatePage(data) {
     var carDivHTML = '';
 
     for (var i = 0; i < data.cars.length; i++) {
@@ -51,11 +51,15 @@ function loadInventory() {
 
     document.querySelector('#car-container').innerHTML = carDivHTML;
 
+    }
+
+    populatePage(data);
 
 });
 
 inventoryLoader.open('GET', 'inventory.json')
 inventoryLoader.send();
+
 
 }
     
@@ -84,8 +88,12 @@ function defaultStyles() {
         var backgroundCards = document.getElementsByClassName('backgroundChange');
 
         for (var i = 0; i < backgroundCards.length;i++) {
+
+            backgroundCards[i].setAttribute('style', 'background: clear');
+
             backgroundCards[i].setAttribute('class', 'col-md-4 col-sm-4 col-xs-4 carCard');
-        }
+
+                    }
 
         document.querySelector('#edit-input').value = '';
 
@@ -101,36 +109,45 @@ function defaultStyles() {
 
     function changeStyles(e) {
 
-        if (e.path[0].className !== 'form-control') {
+        function changeCardColor (card, color) {
+
+        if (card[0].className !== 'form-control') {
             defaultStyles();
         }
 
-        if (e.path[1].className === "row") {    
+        if (card[1].className === "row") {    
 
             document.querySelector('#edit-input').removeAttribute('disabled', 'disabled');
 
             document.querySelector('#submit').removeAttribute('disabled', 'disabled')
 
-            e.path[0].classList.toggle('backgroundChange');
+            card[0].classList.toggle('backgroundChange');
+
+            card[0].setAttribute('style', `background-color: ${color}`)
             
-        } else if (e.path[2].className === 'row') {
+        } else if (card[2].className === 'row') {
 
             document.querySelector('#edit-input').removeAttribute('disabled', 'disabled');
 
             document.querySelector('#submit').removeAttribute('disabled', 'disabled')
 
-            e.path[1].classList.toggle('backgroundChange');
+            card[1].classList.toggle('backgroundChange');
+
+            card[1].setAttribute('style', `background-color: ${color}`)
             
         } 
+
+    }
+
+            changeCardColor(e.path, 'lightblue');
 
 } 
 
     
 
     function editDescription (e) {
-        if (e.path[1].className === "row") {
 
-            console.log(e)
+        if (e.path[1].className === "row") {
 
             document.querySelector('#edit-input').focus();
             

@@ -5,7 +5,7 @@
     font-size: 45px;
     padding-top: 8px;
     color: black;
-    /*font-family: 'Loved by the King', cursive;*/
+    font-family: 'Loved by the King', cursive;
     display: inline;
     letter-spacing: 17px;
 }
@@ -29,7 +29,7 @@
 
 #myNav {
     margin-top: 0;
-    background-color: tomato;
+    background-color: blue;
     height: 60px;
 }
 
@@ -68,10 +68,10 @@ body {
 }
 
 .backgroundChange  {
-    background-color: rgba(255,99,71,.8);
+    /*background-color: rgba(255,99,71,.8);*/
     border: 5px solid rgba(0,0,0,.7);
     padding:3%;
-    color: white;
+    /*color: white;*/
     line-height: 30px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
