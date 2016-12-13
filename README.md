@@ -94,3 +94,4 @@ function loadInventory (callback) {
   });
 }
 ```
+# string-manipulation

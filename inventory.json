@@ -1,0 +1,67 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Cadilac",
+      "model": "Escalade",
+      "year": "2014",
+      "price": "40000",
+      "description": "We Roll Tight Whips, every day."
+    },
+    {
+      "make": "Ford",
+      "model": "Focus",
+      "year": "2004",
+      "price": "3999",
+      "description": "87,000 miles on the odometer, still running great!"
+    },
+    {
+      "make": "Volvo",
+      "model": "740",
+      "year": "1994",
+      "price": "1399",
+      "description": "Barely Used, Safe, Reliable"
+    },
+    {
+      "make": "BMW",
+      "model": "X6",
+      "year": "2017",
+      "price": "24000",
+      "description": "Sporty is as sporty does"
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Diamante",
+      "year": "1990",
+      "price": "2000",
+      "description": "Sitting in the garage for years, only used for as town car."
+    },
+    {
+      "make": "Mercedes",
+      "model": "Benz",
+      "year": "2008",
+      "price": "35000",
+      "description": "Luxury at its finest. Still runs like a Mercedes should."
+    },
+    {
+      "make": "Mutt Cuts",
+      "model": "Dog Mobile",
+      "year": "1994",
+      "price": "2000",
+      "description": "I spent my life savings turning my van into a dog"
+    },
+    {
+      "make": "Volkswagon",
+      "model": "Jetta",
+      "year": "2009",
+      "price": "3000",
+      "description": "Slight problem with the gass sensor but other than that works great!"
+    }
+  ]
+}
